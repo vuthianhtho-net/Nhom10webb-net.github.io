@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trang chủ</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		.container {
+			width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #ffffff;
+		}
+		.event {
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			background-color: #f9f9f9;
+		}
+		.event-image {
+			width: 200px;
+			height: 150px;
+			object-fit: cover;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Trang chủ</h1>
+		<h2>Sự kiện sắp diễn ra</h2>
+		<div class="event">
+			<img src="event1.jpg" alt="Event 1" class="event-image">
+			<h3>Sự kiện 1</h3>
+			<p>Mô tả sự kiện 1</p>
+			<p>Thời gian: 12:00 PM - 2:00 PM</p>
+			<p>Địa điểm: ABC Center</p>
+		</div>
+		<h2>Sự kiện nổi bật</h2>
+		<div class="event">
+			<img src="event2.jpg" alt="Event 2" class="event-image">
+			<h3>Sự kiện 2</h3>
+			<p>Mô tả sự kiện 2</p>
+			<p>Thời gian: 3:00 PM - 5:00 PM</p>
+			<p>Địa điểm: XYZ Hall</p>
+		</div>
+		<nav>
+			<a href="events.html">Danh sách sự kiện</a> |
+			<a href="create-event.html">Tạo sự kiện</a> |
+			<a href="profile.html">Hồ sơ người dùng</a>
+		</nav>
+	</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tạo sự kiện</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		.container {
+			width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #ffffff;
+		}
+		form {
+			margin-bottom: 20px;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+		input[type="text"], textarea {
+			width: 100%;
+			padding: 5px;
+			margin-bottom: 10px;
+		}
+		input[type="submit"] {
+			background-color: #4caf50;
+			color: #ffffff;
+			border: none;
+			padding: 10px 20px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Tạo sự kiện</h1>
+		<form>
+			<label for="event-name">Tên sự kiện:</label>
+			<input type="text" id="event-name" name="event-name" required>
+
+			<label for="event-description">Mô tả:</label>
+			<textarea id="event-description" name="event-description" required></textarea>
+
+			<label for="event-time">Thời gian:</label>
+			<input type="text" id="event-time" name="event-time" required>
+
+			<label for="event-location">Địa điểm:</label>
+			<input type="text" id="event-location" name="event-location" required>
+
+			<input type="submit" value="Tạo sự kiện">
+		</form>
+		<nav>
+			<a href="index.html">Trang chủ</a> |
+			<a href="events.html">Danh sách sự kiện</a> |
+			<a href="profile.html">Hồ sơ người dùng</a>
+		</nav>
+	</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hồ sơ người dùng</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		.container {
+			width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #ffffff;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Hồ sơ người dùng</h1>
+		<p>Thông tin người dùng...</p>
+		<nav>
+			<a href="index.html">Trang chủ</a> |
+			<a href="events.html">Danh sách sự kiện</a> |
+			<a href="create-event.html">Tạo sự kiện</a>
+		</nav>
+	</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Danh sách sự kiện</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		.container {
+			width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #ffffff;
+		}
+		.event {
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			background-color: #f9f9f9;
+		}
+		.event-image {
+			width: 200px;
+			height: 150px;
+			object-fit: cover;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Danh sách sự kiện</h1>
+		<div class="event">
+			<img src="event1.jpg" alt="Event 1" class="event-image">
+			<h3>Sự kiện 1</h3>
+			<p>Mô tả sự kiện 1</p>
+			<p>Thời gian: 12:00 PM - 2:00 PM</p>
+			<p>Địa điểm: ABC Center</p>
+			<a href="event-detail.html">Xem chi tiết</a>
+		</div>
+		<div class="event">
+			<img src="event2.jpg" alt="Event 2" class="event-image">
+			<h3>Sự kiện 2</h3>
+			<p>Mô tả sự kiện 2</p>
+			<p>Thời gian: 3:00 PM - 5:00 PM</p>
+			<p>Địa điểm: XYZ Hall</p>
+			<a href="event-detail.html">Xem chi tiết</a>
+		</div>
+		<nav>
+			<a href="index.html">Trang chủ</a> |
+			<a href="create-event.html">
+                
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chi tiết sự kiện</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		.container {
+			width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #ffffff;
+		}
+		.event-image {
+			width: 400px;
+			height: 300px;
+			object-fit: cover;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Chi tiết sự kiện</h1>
+		<img src="event1.jpg" alt="Event 1" class="event-image">
+		<h3>Sự kiện 1</h3>
+		<p>Mô tả sự kiện 1</p>
+		<p>Thời gian: 12:00 PM - 2:00 PM</p>
+		<p>Địa điểm: ABC Center</p>
+		<a href="events.html">Quay lại danh sách sự kiện</a>
+		<a href="register-event.html">Đăng kí tham gia sự kiện</a>
+	</div>
+</body>
+</html>
