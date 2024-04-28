@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    .form-main-wrapper{
+        background-color: #C1E1C1;
+    }
+    body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    }
+    .form {
+    margin-bottom: 15px;
+    }
+    .form-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    }
+    .form-form-wrapper {
+    margin: 0 auto;
+    max-width: 570px;
+    width: 100%;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    }
+    .form-input-wrapp > div {
+    display: flex;
+    gap: 20px;
+    }
+    .input {
+    width: 100%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    color: #536387;
+    outline: none;
+    resize: none;
+    }
+    textarea {
+    width: 100%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    color: #536387;
+    outline: none;
+    resize: none;
+    }
+    .input::placeholder,
+    select.input,
+    .input[type='date']::-webkit-datetime-edit-text,
+    .input[type='date']::-webkit-datetime-edit-month-field,
+    .input[type='date']::-webkit-datetime-edit-day-field,
+    .input[type='date']::-webkit-datetime-edit-year-field {
+    color: rgba(83, 99, 135, 0.5);
+    }
+    textarea::placeholder,
+    selecttextarea,
+    textarea[type='date']::-webkit-datetime-edit-text,
+    textarea[type='date']::-webkit-datetime-edit-month-field,
+    textarea[type='date']::-webkit-datetime-edit-day-field,
+    textarea[type='date']::-webkit-datetime-edit-year-field {
+    color: rgba(83, 99, 135, 0.5);
+    }
+    .input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+    textarea:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+    label {
+    color: #536387;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 10px;
+    }
+    .form-btn {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 14px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: #6a64f1;
+    color: white;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.5s;
+    }
+    .form-btn:hover {
+    box-shadow: 10px 13px 18px rgba(0, 0, 0, 0.05);
+    scale: 1.1;
+    color: #6a64f1;
+    background-color: white;
+    border: 1px solid #6a64f1;
+    }
+</style>
+<body>
+<div class="form-main-wrapper">
+    <div class="form-form-wrapper">
+    <form id="userForm" target="_blank" action="https://formbold.com/s/6vrdM" method="POST" enctype="multipart/form-data">
+        <div class="form-input-wrapp form">
+        <label for="firstname" class="label"> Họ và tên </label>
+        <div>
+            <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="Họ"
+            class="input"
+            />
+            <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Tên"
+            class="input"
+            />
+        </div>
+        </div>
+        <div class="form">
+        <label for="age" class="label"> Tuổi </label>
+        <input
+            type="text"
+            name="age"
+            id="age"
+            placeholder="Ví dụ: 25"
+            class="input"
+        />
+        </div>
+        <div class="form">
+        <label for="dob" class="label"> Ngày sinh </label>
+        <input type="date" name="dob" id="dob" class="input" />
+        </div>
+        <div class="form">
+        <label class="label">Giới tính</label>
+        <select class="input" name="occupation" id="occupation">
+            <option value="male">Nam</option>
+            <option value="female">Nữ</option>
+            <option value="others">Khác</option>
+        </select>
+        </div>
+        <div class="form">
+        <label for="email" class="label"> Email </label>
+        <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="ví dụ: example@email.com"
+            class="input"
+        />
+        </div>
+        <div class="form">
+            <label for="address" class="label"> Address </label>
+            <textarea id="address" class="input" placeholder="123 Anywhere St..., Any city, State, Country" name="address" rows="5"></textarea>
+            </div>
+        <button type="button" class="form-btn" onclick="submitForm()">Gửi</button>
+    </form>
+    </div>
+</div>
+<script>
+    function submitForm() {
+    var firstname = document.getElementById("firstname").value;
+    var lastname = document.getElementById("lastname").value;
+    var age = document.getElementById("age").value;
+    var dob = document.getElementById("dob").value;
+    var occupation = document.getElementById("occupation").value;
+    var email = document.getElementById("email").value;
+    var address = document.getElementById("address").value;
+
+    var formboldForm = document.getElementById("userForm");
+    formboldForm.elements["firstname"].value = firstname;
+    formboldForm.elements["lastname"].value = lastname;
+    formboldForm.elements["age"].value = age;
+    formboldForm.elements["dob"].value = dob;
+    formboldForm.elements["occupation"].value = occupation;
+    formboldForm.elements["email"].value = email;
+    formboldForm.elements["address"].value = address;
+
+    formboldForm.submit();
+    setTimeout(function() {
+        window.location.reload();
+    }, 1000); 
+}
+</script>
+</body>
+</html>
